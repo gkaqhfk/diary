@@ -6,7 +6,7 @@
 	<select id="findAll" resultType="com.cbnu.diary.domain.Member">
 		select * from member
 	</select>
-	
+
 	<select id="findOne" resultType="com.cbnu.diary.domain.Member">
 		select * from member where member_id = #{memberId}
 	</select>
