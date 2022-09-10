@@ -1,5 +1,7 @@
 package com.cbnu.diary.controller;
 
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,8 +22,8 @@ public class MemberController {
 	
 	@GetMapping
 	public String members(Model model) {
-		Member member = memberService.getMember("e200uk");
-		model.addAttribute("member", member);
+		List<Member> members = memberService.getMembers();
+		model.addAttribute("members", members);
 		return "member";
 	}
 	

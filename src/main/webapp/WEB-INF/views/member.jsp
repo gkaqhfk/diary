@@ -5,6 +5,21 @@
 	<title>Member</title>
 </head>
 <body>
-	<h1>${member.memberId} / ${member.password}</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>password</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach items="${members}" var="member">
+				<tr>
+					<td>${member.memberId}</td>
+					<td>${member.password}</td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
 </body>
 </html>
