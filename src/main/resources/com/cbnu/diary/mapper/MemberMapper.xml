@@ -4,11 +4,11 @@
 <mapper namespace="com.cbnu.diary.mapper.MemberMapper">
 
 	<select id="findAll" resultType="com.cbnu.diary.entity.Member">
-		select * from member
+		SELECT * FROM MEMBER
 	</select>
 
 	<select id="findOne" resultType="com.cbnu.diary.entity.Member">
-		select * from member where member_id = #{memberId}
+		SELECT * FROM MEMBER WHERE ID = #{id}
 	</select>
 
 </mapper>

@@ -8,15 +8,21 @@
 	<table>
 		<thead>
 			<tr>
+				<th>name</th>
 				<th>id</th>
-				<th>password</th>
+				<th>pw</th>
+				<th>tel</th>
+				<th>gender</th>
 			</tr>
 		</thead>
 		<tbody>
 			<c:forEach items="${members}" var="member">
 				<tr>
-					<td>${member.memberId}</td>
-					<td>${member.password}</td>
+					<td>${member.name}</td>
+					<td>${member.id}</td>
+					<td>${member.pw}</td>
+					<td>${member.tel}</td>
+					<td>${member.gender}</td>
 				</tr>
 			</c:forEach>
 		</tbody>

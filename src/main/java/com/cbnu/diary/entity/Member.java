@@ -5,7 +5,10 @@ import lombok.Data;
 @Data
 public class Member {
 
-	private String memberId;
-	private String password;
+	private String name;
+	private String id;
+	private String pw;
+	private String tel;
+	private String gender;
 	
 }
