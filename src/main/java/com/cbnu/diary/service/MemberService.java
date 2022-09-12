@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.cbnu.diary.domain.Member;
+import com.cbnu.diary.entity.Member;
 import com.cbnu.diary.mapper.MemberMapper;
 
 @Service

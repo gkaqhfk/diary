@@ -1,4 +1,4 @@
-package com.cbnu.diary.domain;
+package com.cbnu.diary.entity;
 
 import lombok.Data;
 
