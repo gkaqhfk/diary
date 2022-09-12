@@ -2,6 +2,7 @@ package com.cbnu.diary.controller;
 
 import java.util.List;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,15 +11,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.cbnu.diary.entity.Member;
 import com.cbnu.diary.service.MemberService;
 
+@RequiredArgsConstructor
 @Controller
 @RequestMapping("members")
 public class MemberController {
 
 	private final MemberService memberService;
-	
-	public MemberController(MemberService memberService) {
-		this.memberService = memberService;
-	}
 	
 	@GetMapping
 	public String members(Model model) {
