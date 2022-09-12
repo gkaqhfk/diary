@@ -38,16 +38,16 @@ public class JdbcUserDetailsManagerTest {
     @Test
     public void createUser() {
         UserDetails user = User.builder()
-                .username("corporate")
+                .username("individual")
                 .password("$2a$10$OyLdmX6AtjK8NPhEnvFRJ.8ij6exlEh5iB8vry7x7kEknkBfmjuCe")
-                .roles("CORPORATE")
+                .roles("INDIVIDUAL")
                 .build();
         jdbcUserDetailsManager.createUser(user);
     }
 
     @Test
     public void loadUserByUsername() {
-        UserDetails userDetails = jdbcUserDetailsManager.loadUserByUsername("user");
+        UserDetails userDetails = jdbcUserDetailsManager.loadUserByUsername("individual");
         System.out.println(userDetails);
     }
 
