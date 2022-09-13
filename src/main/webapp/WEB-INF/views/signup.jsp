@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		<div class="container">
-			<form id="signInForm">
+			<form id="signInForm" enctype="multipart/form-data">
 				<div class="row mb-3">
 					<label for="username" class="col-sm-2 col-form-label">username</label>
 					<div class="col-sm-10">
@@ -24,7 +24,13 @@
 				<div class="row mb-3">
 					<label for="password" class="col-sm-2 col-form-label">password</label>
 					<div class="col-sm-10">
-						<input type="password" class="form-control" name="password" id="password">
+						<input type="password" class="form-control" name="password" id="password" />
+					</div>
+				</div>
+				<div class="row mb-3">
+					<label for="file" class="col-sm-2 col-form-label">Default file input example</label>
+					<div class="col-sm-10">
+						<input class="form-control" type="file" id="file" />
 					</div>
 				</div>
 				<button type="button" class="btn btn-primary" id="signInButton">Sign in</button>
@@ -47,12 +53,16 @@
 					});
 				});
 				$('#signInButton').click(function() {
-					const data = $('#signInForm').serializeObject();
+					const data = new FormData();
+					const form = $('#signInForm').serializeObject();
+					const file = $('#file')[0].files[0];
+					data.append('form', new Blob([JSON.stringify(form)], { type: "application/json" }));
+					data.append('file', file);
 					$.post({
 						url: '/signup',
-						data: JSON.stringify(data),
+						data: data,
 						processData: false,
-						contentType: 'application/json; charset=utf-8'
+						contentType: false
 					}).done(function(data) {
 						console.log(data);
 					});

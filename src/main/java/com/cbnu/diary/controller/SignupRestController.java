@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.function.EntityResponse;
 
 @Slf4j
@@ -22,8 +23,9 @@ public class SignupRestController {
 
     @PostMapping
     public ResponseEntity<Boolean> create(
-            @RequestBody UserRequest userRequest) {
-        log.debug("userRequest: {}", userRequest);
+            @RequestPart("form") UserRequest userRequest,
+            @RequestPart("file") MultipartFile file) {
+        log.debug("userRequest: {}, file: {}", userRequest, file);
         return new ResponseEntity<>(Boolean.TRUE, HttpStatus.CREATED);
     }
 
