@@ -7,34 +7,41 @@
 	</head>
 	<body>
 		<div class="container">
-			<form id="signInForm" enctype="multipart/form-data">
-				<div class="row mb-3">
-					<label for="username" class="col-sm-2 col-form-label">username</label>
-					<div class="col-sm-10">
-						<div class="row row-cols-lg-auto g-3 align-items-center">
-							<div class="col-12">
-								<input type="text" class="form-control" name="username" id="username" />
-							</div>
-							<div class="col-12">
-								<button type="button" class="btn btn-primary" id="checkButton">check</button>
+			<main>
+				<div class="py-5 text-center">
+					<h2>Sign in</h2>
+				</div>
+				<div class="row g-5">
+					<form id="signInForm" enctype="multipart/form-data">
+						<div class="row mb-3">
+							<label for="username" class="col-sm-2 col-form-label">username</label>
+							<div class="col-sm-10">
+								<div class="row row-cols-lg-auto g-3 align-items-center">
+									<div class="col-12">
+										<input type="text" class="form-control" name="username" id="username" />
+									</div>
+									<div class="col-12">
+										<button type="button" class="btn btn-primary" id="checkButton">check</button>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
+						<div class="row mb-3">
+							<label for="password" class="col-sm-2 col-form-label">password</label>
+							<div class="col-sm-10">
+								<input type="password" class="form-control" name="password" id="password" />
+							</div>
+						</div>
+						<div class="row mb-3">
+							<label for="file" class="col-sm-2 col-form-label">file</label>
+							<div class="col-sm-10">
+								<input class="form-control" type="file" id="file" />
+							</div>
+						</div>
+						<button type="button" class="btn btn-primary" id="signInButton">Sign in</button>
+					</form>
 				</div>
-				<div class="row mb-3">
-					<label for="password" class="col-sm-2 col-form-label">password</label>
-					<div class="col-sm-10">
-						<input type="password" class="form-control" name="password" id="password" />
-					</div>
-				</div>
-				<div class="row mb-3">
-					<label for="file" class="col-sm-2 col-form-label">Default file input example</label>
-					<div class="col-sm-10">
-						<input class="form-control" type="file" id="file" />
-					</div>
-				</div>
-				<button type="button" class="btn btn-primary" id="signInButton">Sign in</button>
-			</form>
+			</main>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
