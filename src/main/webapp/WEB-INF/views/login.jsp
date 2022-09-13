@@ -23,6 +23,7 @@
 			</label>
 		</div>
 		<input type="submit" value="Log in" />
+		<a href="${pageContext.request.contextPath}/signup">Sign up</a>
 	</form>
 </body>
 </html>
