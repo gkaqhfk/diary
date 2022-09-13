@@ -37,12 +37,25 @@ public class JdbcUserDetailsManagerTest {
 
     @Test
     public void createUser() {
-        UserDetails user = User.builder()
+        UserDetails admin = User.builder()
+                .username("admin")
+                .password("$2a$10$OyLdmX6AtjK8NPhEnvFRJ.8ij6exlEh5iB8vry7x7kEknkBfmjuCe")
+                .roles("ADMIN")
+                .build();
+        UserDetails individual = User.builder()
                 .username("individual")
                 .password("$2a$10$OyLdmX6AtjK8NPhEnvFRJ.8ij6exlEh5iB8vry7x7kEknkBfmjuCe")
                 .roles("INDIVIDUAL")
                 .build();
-        jdbcUserDetailsManager.createUser(user);
+        UserDetails corporate = User.builder()
+                .username("corporate")
+                .password("$2a$10$OyLdmX6AtjK8NPhEnvFRJ.8ij6exlEh5iB8vry7x7kEknkBfmjuCe")
+                .disabled(true)
+                .roles("CORPORATE")
+                .build();
+        jdbcUserDetailsManager.createUser(admin);
+        jdbcUserDetailsManager.createUser(individual);
+        jdbcUserDetailsManager.createUser(corporate);
     }
 
     @Test

@@ -10,8 +10,7 @@
 	<http>
 		<csrf disabled="true" />
 		<intercept-url pattern="/login" access="permitAll" />
-		<intercept-url pattern="/individual/**" access="hasRole('ROLE_INDIVIDUAL')" />
-		<intercept-url pattern="/corporate/**" access="hasRole('ROLE_CORPORATE')" />
+		<intercept-url pattern="/admin/**" access="hasRole('ADMIN')" />
 		<intercept-url pattern="/**" access="authenticated" />
 		<form-login login-page="/login" />
 		<logout />

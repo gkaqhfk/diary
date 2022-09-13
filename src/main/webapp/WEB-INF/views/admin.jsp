@@ -2,9 +2,9 @@
 <%@ page session="false" %>
 <html>
 <head>
-	<title>Corporate</title>
+	<title>Admin</title>
 </head>
 <body>
-	<h1>Corporate!</h1>
+	<h1>Admin!</h1>
 </body>
 </html>
