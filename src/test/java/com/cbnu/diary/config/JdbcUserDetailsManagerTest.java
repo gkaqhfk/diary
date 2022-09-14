@@ -45,13 +45,13 @@ public class JdbcUserDetailsManagerTest {
         UserDetails individual = User.builder()
                 .username("individual")
                 .password("$2a$10$OyLdmX6AtjK8NPhEnvFRJ.8ij6exlEh5iB8vry7x7kEknkBfmjuCe")
-                .roles("INDIVIDUAL")
+                .roles("USER")
                 .build();
         UserDetails corporate = User.builder()
                 .username("corporate")
                 .password("$2a$10$OyLdmX6AtjK8NPhEnvFRJ.8ij6exlEh5iB8vry7x7kEknkBfmjuCe")
                 .disabled(true)
-                .roles("CORPORATE")
+                .roles("USER")
                 .build();
         jdbcUserDetailsManager.createUser(admin);
         jdbcUserDetailsManager.createUser(individual);
